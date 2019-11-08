@@ -1,4 +1,6 @@
 <?php
+/* !Error Handling! */
+
 //phpinfo();
 
 /*
@@ -18,6 +20,7 @@ foreach ($errors as $error){
 }
 */
 
+/*
 // Report simple running errors
 error_reporting(E_ALL);
 // Make sure they're on screen
@@ -32,7 +35,7 @@ ini_set("html_errors", 1);
 include "non_existent_file";
 
 // Warning
-$my_file = file('non_existent_file') or die("Failed opening file");
+$my_file = @file('non_existent_file') or die("Failed opening file");
 
 function error_function($error) {
     echo $bad;
@@ -44,6 +47,7 @@ function error_function($error) {
 echo error_function();
 
 echo "End of File.";
+*/
 
 ?>
 
